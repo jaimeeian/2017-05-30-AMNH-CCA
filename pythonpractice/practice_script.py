@@ -3,7 +3,7 @@ This script contains an exampleclass that we will write. The class will be calle
 '''
 
 sample_int = 5
-
+print sample_int
 class Algebra : 
     def __init__( self, x, y ) :
         #We are defining arguments as attributes of the objet itself
@@ -28,3 +28,14 @@ class Algebra :
     def modify_x( self ) :
         self.x = self.x * 2
 
+if __name__ == "__main__" :
+    #Create instance of Algebra
+    myalg = Algebra(100,150)
+    # Print some outputs using the Algebra class
+    print myalg.multiply()
+    myalg.modify_x()
+    print myalg.multiply()
+
+else :
+    print "name not equal to main"
+    print __name__
